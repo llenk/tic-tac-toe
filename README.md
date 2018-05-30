@@ -1,5 +1,6 @@
 # Passport with React
 This version uses React to control the login requests and redirection in coordination with client-side routing.
+`Fork` this repo and make your own copy!
 
 ## Create database and table
 
