@@ -2,19 +2,15 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 import Nav from '../../components/Nav/Nav';
-import { fetchUser } from '../../redux/actions/userActions';
+import {USER_ACTIONS} from '../../redux/actions/userActions';
 
 const mapStateToProps = state => ({
   user: state.user,
 });
 
-const mapDispatchToProps = {
-  fetchUser,
-};
-
 class InfoPage extends Component {
   componentDidMount() {
-    this.props.fetchUser();
+    this.props.dispatch({ type: USER_ACTIONS.FETCH_USER });
   }
 
   componentDidUpdate() {
@@ -46,4 +42,4 @@ class InfoPage extends Component {
 }
 
 // this allows us to use <App /> in index.js
-export default connect(mapStateToProps, mapDispatchToProps)(InfoPage);
+export default connect(mapStateToProps)(InfoPage);
