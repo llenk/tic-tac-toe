@@ -1,14 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import PropTypes from 'prop-types';
 
-const propTypes = {
-  history: PropTypes.shape({ push: PropTypes.func }),
-};
-
-const defaultProps = {
-  history: { push: () => { } },
-};
 
 class RegisterPage extends Component {
   constructor(props) {
@@ -122,9 +114,6 @@ class RegisterPage extends Component {
     );
   }
 }
-
-RegisterPage.propTypes = propTypes;
-RegisterPage.defaultProps = defaultProps;
 
 export default RegisterPage;
 
