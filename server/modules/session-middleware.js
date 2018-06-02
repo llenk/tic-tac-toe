@@ -1,5 +1,7 @@
 // No changes should be required in this file
 
+// this is how we get a cookie
+
 const cookieSession = require('cookie-session');
 const warnings = require('../constants/warnings');
 
@@ -13,6 +15,8 @@ const warnings = require('../constants/warnings');
   `application` ->  `storage` -> `cookies` section of the chrome debugger
 */
 
+// in response to the secret, won't stop anything
+// how do we set this? the dotenv file
 const serverSessionSecret = () => {
   if (!process.env.SERVER_SESSION_SECRET ||
       process.env.SERVER_SESSION_SECRET.length < 8 ||

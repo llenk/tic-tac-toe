@@ -49,3 +49,6 @@ Let's look through some of the provided code to get an idea of what's happening.
 
 Let's take a look at this in practice.
 
+# Notes
+.env files are NOT COMMITTED because people will hack your stuff
+That's where you keep your secrets.
